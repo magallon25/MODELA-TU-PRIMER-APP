@@ -1,0 +1,12 @@
+sequenceDiagram
+    autonumber
+    actor Alumno
+    participant App as App Móvil
+    participant Cafeteria as Personal Cafetería
+
+    Alumno->>App: Seleccionar productos y hacer pedido
+    App->>Alumno: Solicitar confirmación de pago
+    Alumno->>App: Confirmar y realizar pago
+    App->>Cafeteria: Enviar nuevo pedido para preparación
+    Cafeteria-->>App: Confirmar recepción del pedido
+    App-->>Alumno: Notificación: "Pedido registrado con éxito"
