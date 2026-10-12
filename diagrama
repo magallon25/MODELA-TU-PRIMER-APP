@@ -1,0 +1,22 @@
+Fragmento de código
+classDiagram
+    class Alumno {
+        +String idAlumno
+        -String correoInstitucional
+        +realizarPedido() void
+    }
+
+    class Pedido {
+        +String idPedido
+        -String estado
+        +calcularTotal() Float
+    }
+
+    class Producto {
+        +String nombre
+        -Float precio
+        +actualizarStock() void
+    }
+
+    Alumno "1" -- "0..*" Pedido : realiza
+    Pedido "1..*" -- "1..*" Producto : contiene
